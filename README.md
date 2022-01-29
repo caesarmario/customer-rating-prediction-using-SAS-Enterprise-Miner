@@ -161,15 +161,80 @@
 </tbody>
 </table>
 
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
+<br><br>
+
 ### 📏 Linear Regression
 #### 1️⃣📏 Standard Linear Regression
-![Standard LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/15%20-%20Standard%20LR.png)
-   - <br>
+![Standard LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/15%20-%20Standard%20LR.png)<br>
+![ANOVA Standard LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/16%20-%20ANOVA%20Standard%20LR.png)
+   - RMSE value for training is 1.73, for validation is 1.712, whereas the RMSE value for testing is 1.746.
+   - The p-value from ANOVA table is 0.9250 (> 0.05), which can be concluded that the independent variables do not exhibit a statistically significant connection with the dependent variable, or the independent variables do not predict the dependent variable dependably.
+   - The value of R-square is 0.0180, which means this result shows that the independent variable can be used to predict just 1.8% of the variation in ratings (dependent variable).<br>
 
+#### 2️⃣📏 Forward Linear Regression
+![Forward LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/18%20-%20Forward%20LR.png)<br>
+![ANOVA Forward LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/17%20-%20ANOVA%20Forward%20LR.png)
+   - The RMSE value for training is 1.71, for validation is 1.733, whereas the RMSE value for testing is 1.723.
+   - The p-value and r-square obtained error or did not appear.<br>
 
+#### 3️⃣📏 Stepwise Linear Regression
+![Stepwise LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/19%20-%20Stepwise%20LR.png)<br>
+![ANOVA Stepwise LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/20%20-%20ANOVA%20Stepwise%20LR.png)
+   - RMSE value for training is 1.71, for validation is 1.733, whereas the RMSE value for testing is 1.723.
+   - The p-value and r-square obtained error or did not appear.<br>
 
+#### 4️⃣📏 Backward Linear Regression
+![Backward LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/21%20-%20Backward%20LR.png)<br>
+![ANOVA Backward LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/22%20-%20ANOVA%20Backward%20LR.png)
+   - RMSE value for training is 1.71, for validation is 1.733, whereas the RMSE value for testing is 1.723.
+   - There are 15 steps performed in this model, and based on the resulting p-value, there are no independent variables that affect the rating value (dependent variable) since the p-value is more than 0.05.
+   - The p-value and r-square obtained error or did not appear.<br>
 
+#### 👀📏 Linear Regression Summary
+![Summary LR](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/23%20-%20Comparison%20LR.png)
 
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
+<br><br>
+
+### 🕸 Neural Network
+#### 1️⃣🕸 Generalized Linear Model
+![GLM](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/24%20-%20Generalized%20Linear%20Model_NN.png)<br>
+![Iteration Plot - GLM](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/25%20-%20Iteration%20Plot_Generalized%20Linear%20Model_NN.png)<br>
+![Opt Result - GLM](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/26%20-%20Optimization%20Results_Generalized%20Linear%20Model_NN.png)
+   - RMSE value for training is 1.73, for validation is 1.731, whereas the RMSE value for testing is 1.743.
+   - There is only one iteration with the initial RMSE train 1.739708 and ending at 1.729611
+   - The initial RMSE validation is 1.732672 and ends at 1.731434. <br>
+
+#### 2️⃣🕸 Multilayer Perceptron 1 (2 Hidden Units, Iterations 100)
+![MLP1](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/27%20-%20Multilayer%20Perceptron_NN.png)<br>
+![Iteration Plot - MLP1](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/28%20-%20Iteration%20Plot_Multilayer%20Perceptron_NN.png)<br>
+![Opt Result - MLP1](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/29%20-%20Optimization%20Results_Multilayer%20Perceptron_NN.png)
+   - RMSE value for training is 1.77, for validation is 1.730, whereas the RMSE value for testing is 1.721.
+   - There were 96 iterations in this model with the initial RMSE train of 1.771294 and continued to decrease to 1.65361
+   - The initial RMSE validation value is 1.732672 and continues to increase to 1.893184 (overfitting). 
+   - The best iteration is the first iteration with RMSE training, which is 1.768396, and RMSE validation is 1.730018. <br>
+
+#### 3️⃣🕸 Multilayer Perceptron 3 (8 Hidden Units, Iterations 300)
+![MLP2](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/30%20-%20Multilayer%20Perceptron_NN2.png)<br>
+![Iteration Plot - MLP2](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/31%20-%20Iteration%20Plot_Multilayer%20Perceptron_NN2.png)<br>
+![Opt Result - MLP2](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/32%20-%20Optimization%20Results_Multilayer%20Perceptron_NN2.png)
+   - RMSE value for training is 1.83, for validation is 1.731, whereas the RMSE value for testing is 1.723.
+   - There were 146 iterations in this model with the initial RMSE train of 1.833963 and continued to decrease to 1.614349.
+   - The initial RMSE validation value is 1.732672 and continues to increase to 1.877191 (overfitting).
+   - The best iteration is the first iteration with RMSE training is 1.828181, and for RMSE validation is 1.730597. <br>
+
+#### 4️⃣🕸 Multilayer Perceptron 2 (4 Hidden Units, Iterations 200)
+![MLP3](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/33%20-%20Multilayer%20Perceptron_NN3.png)<br>
+![Iteration Plot - MLP3](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/34%20-%20Iteration%20Plot_Multilayer%20Perceptron_NN3.png)<br>
+![Opt Result - MLP3](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/35%20-%20Optimization%20Results_Multilayer%20Perceptron_NN3.png)
+   - RMSE value for training is 1.98, for validation is 1.724, whereas the RMSE value for testing is 1.725.
+   - There were 189 iterations in this model with the initial RMSE train of 1.982259 and continued to decrease to 1.464764.
+   - The initial RMSE validation value is 1.732672 and continues to increase to 2.169641.
+   - The best iteration is the first iteration with RMSE training, which is 1.976888 and RMSE validation, which is 1.72416. <br>
+
+#### 👀🕸 Neural Network Summary
+![Summary NN](https://github.com/caesarmario/customer-rating-prediction-using-SAS-Enterprise-Miner/blob/main/Screenshot/36%20-%20Comparison%20NN.png)
 
 [![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
 <br><br>
