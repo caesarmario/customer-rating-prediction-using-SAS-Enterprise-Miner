@@ -17,6 +17,15 @@
   - [About Project](#-about-project)
   - [Objectives](#-objectives)
   - [Data Set Description](#-data-set-description)
+  - [Process Flow](#-process-flow)
+  - [Initial Data Exploration](#-initial-data-exploration)
+  - [Data Pre-processing](#-data-pre-processing)
+  - [EDA](#-eda)
+  - [Model Implementation](#-model-implementation)
+      - [Data Preparation](#-data-preparation)
+      - [Experiment Preparation](#-experiment-preparation)
+      - [Linear Regression](#-linear-regression)
+      - [Neural Network](#-neural-network)
 
 ## 🖋 About Project:
 *   This project is to predict customer rating using SAS Enterprise Miner.
